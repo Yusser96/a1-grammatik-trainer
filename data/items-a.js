@@ -1,0 +1,186 @@
+// A1 topics 01–07
+window.addItems(({ T, mc, fill, order, wrong, extra }) => {
+
+T("01"); // sein and haben
+mc(1, "Ich ___ aus Syrien.", ["bin", "bist", "ist"], 0, "ich → bin. sein: ich bin, du bist, er/sie/es ist.");
+mc(1, "Du ___ sehr nett.", ["ist", "bist", "sind"], 1, "du → bist. nett = nice.");
+mc(1, "Wir ___ Hunger.", ["haben", "habt", "hat"], 0, "wir → haben. Hunger haben = to be hungry (German uses haben, not sein).");
+mc(1, "___ du müde?", ["Ist", "Bin", "Bist"], 2, "du → bist, also in a question. müde = tired.");
+fill(1, "Er ___ Lehrer. (sein)", "ist", "er → ist. Jobs come without an article: Er ist Lehrer.");
+fill(1, "Ich ___ eine Schwester. (haben)", "habe", "ich → habe.");
+mc(1, "Ihr ___ ein schönes Haus.", ["haben", "hat", "habt"], 2, "ihr → habt. haben: ich habe, du hast, er hat, wir haben, ihr habt, sie haben.");
+fill(1, "Sofia ___ Ärztin. (sein)", "ist", "Sofia = sie (she) → ist. die Ärztin = the (female) doctor.");
+fill(2, "___ ihr Durst? (haben)", "Habt", "ihr → habt. Durst haben = to be thirsty.");
+fill(2, "Wir ___ heute in Berlin. (sein)", "sind", "wir → sind.");
+order(2, "Ich habe heute keine Zeit.", "Subject, then habe in position 2; keine Zeit at the end.", ["Heute habe ich keine Zeit."]);
+order(2, "Bist du schon lange hier?", "Yes/no question: the verb bist comes first, then du.");
+mc(2, "Herr Weber, ___ Sie Kinder?", ["haben", "habt", "hat"], 0, "Polite Sie takes the same form as sie (they): Sie haben.");
+fill(2, "Du ___ ein neues Handy! (haben)", "hast", "du → hast. das Handy = the mobile phone.");
+mc(2, "Meine Eltern ___ in Polen.", ["ist", "sind", "seid"], 1, "Meine Eltern = sie (they) → sind. seid goes only with ihr.");
+fill(2, "Ihr ___ Studenten, oder? (sein)", "seid", "ihr → seid.");
+order(3, "Meine Schwester und ich sind sehr glücklich.", "Two people (meine Schwester und ich = wir) → sind. glücklich = happy.");
+order(3, "Haben Sie heute Abend Zeit?", "Yes/no question: Haben first, then Sie.");
+wrong(3, "Ich habe müde und gehe ins Bett.", "habe", "bin", "müde is an adjective, so it needs sein: Ich bin müde. haben goes with nouns (Hunger, Zeit).");
+wrong(3, "Du bist Hunger? Hier ist ein Brot.", "bist", "hast", "Hunger is a noun → haben: Du hast Hunger?");
+extra(3, "Wir sind haben zwei Kinder.", "sind", "Only one verb: Wir haben zwei Kinder. sind is extra.");
+fill(3, "Omar und Hana ___ aus Ägypten.", "sind", "Two names = sie (they) → sind.");
+mc(3, "Which sentence is correct?", ["Ihr sind Studenten.", "Ihr seid Studenten.", "Ihr seid Student."], 1, "ihr → seid, and a plural subject needs the plural noun Studenten.");
+mc(3, "Es ___ kalt. Ich ___ eine Jacke.", ["ist / habe", "hat / bin", "ist / bin"], 0, "es ist kalt (adjective → sein); ich habe eine Jacke (noun → haben). die Jacke = the jacket.");
+
+T("02"); // Regular verbs in the present
+mc(1, "Ich ___ in Köln.", ["wohne", "wohnst", "wohnt"], 0, "ich → -e: wohne.");
+mc(1, "Du ___ Deutsch.", ["lernt", "lernst", "lernen"], 1, "du → -st: lernst.");
+mc(1, "Er ___ auf den Bus.", ["warten", "wartest", "wartet"], 2, "er → -t, and stems in -t get an extra e: wartet. warten auf = to wait for.");
+fill(1, "Wir ___ Fußball. (spielen)", "spielen", "wir → -en: spielen (same as the infinitive).");
+fill(1, "Lena ___ gern Musik. (hören)", "hört", "Lena = sie (she) → -t: hört.");
+mc(1, "Wie ___ du?", ["heißt", "heiße", "heißen"], 0, "Stems in -ß drop the s of -st: du heißt.");
+fill(1, "Ihr ___ heute Pizza. (kochen)", "kocht", "ihr → -t: kocht.");
+mc(1, "Die Kinder ___ Wasser.", ["trinkt", "trinken", "trinke"], 1, "Die Kinder = sie (they) → -en: trinken.");
+fill(2, "___ du heute? (arbeiten)", "Arbeitest", "Stem arbeit- ends in -t → du arbeitest (extra e before -st).");
+fill(2, "Er ___ den Schlüssel nicht. (finden)", "findet", "Stem find- ends in -d → er findet (extra e). der Schlüssel = the key.");
+order(2, "Ich lerne jeden Tag Deutsch.", "Subject, verb in position 2 (lerne), then time and object.", ["Jeden Tag lerne ich Deutsch."]);
+order(2, "Sofia tanzt gern am Wochenende.", "sie → tanzt. gern comes right after the verb.", ["Am Wochenende tanzt Sofia gern."]);
+mc(2, "Was ___ ihr am Samstag?", ["machen", "machst", "macht"], 2, "ihr → -t: macht.");
+fill(2, "Pavel ___ in Dresden. (studieren)", "studiert", "er → -t: studiert.");
+mc(2, "Du ___ sehr gut.", ["tanzst", "tanzt", "tanzest"], 1, "Stems in -z: the s of -st disappears → du tanzt.");
+fill(2, "Ich ___ ein Taxi. (brauchen)", "brauche", "ich → -e: brauche. brauchen = to need.");
+order(3, "Am Abend kocht meine Mutter das Essen.", "Time first, verb in position 2 (kocht), subject after it.", ["Meine Mutter kocht am Abend das Essen."]);
+order(3, "Reist ihr gern nach Italien?", "Yes/no question: verb first. ihr → reist. reisen = to travel.");
+wrong(3, "Du arbeitst am Montag im Büro.", "arbeitst", "arbeitest", "Stems in -t need an extra e before -st: arbeitest.");
+wrong(3, "Hana findt die Wohnung schön.", "findt", "findet", "Stems in -d need an extra e before -t: findet.");
+extra(3, "Ihr spielt gern Tennis spielen.", "spielen", "The verb is already conjugated (spielt); the infinitive spielen is extra.");
+fill(3, "Murat und Aylin ___ in Hamburg.", "leben", "Two people = sie (they) → leben. leben = to live.");
+mc(3, "Which sentence is correct?", ["Du heißt Anna.", "Du heißst Anna.", "Du heiße Anna."], 0, "Stems in -ß take only -t in the du-form: heißt.");
+wrong(3, "Meine Eltern wohnt in der Türkei.", "wohnt", "wohnen", "Meine Eltern is plural (sie) → wohnen.");
+
+T("03"); // Irregular verbs in the present
+mc(1, "Er ___ nach Berlin.", ["fährt", "fahrt", "fahre"], 0, "fahren: a → ä in the er-form: er fährt.");
+mc(1, "Du ___ Pizza.", ["esse", "esst", "isst"], 2, "essen: e → i in the du-form: du isst.");
+mc(1, "Sie (she) ___ ein Buch.", ["lest", "liest", "lese"], 1, "lesen: e → ie in the er/sie-form: sie liest.");
+fill(1, "Er ___ lange. (schlafen)", "schläft", "schlafen: a → ä: er schläft.");
+fill(1, "Du ___ gut Deutsch. (sprechen)", "sprichst", "sprechen: e → i: du sprichst.");
+mc(1, "Ich ___ den Bus.", ["nimmt", "nehme", "nimmst"], 1, "No vowel change in the ich-form: ich nehme.");
+fill(1, "Jonas ___ seiner Mutter. (helfen)", "hilft", "helfen: e → i: er hilft.");
+mc(1, "Wir ___ einen Film.", ["sehen", "seht", "sieht"], 0, "wir-form = infinitive, no vowel change: wir sehen.");
+fill(2, "___ du heute Omar? (treffen)", "Triffst", "treffen: e → i: du triffst. treffen = to meet.");
+fill(2, "Er ___ mir das Geld. (geben)", "gibt", "geben: e → i: er gibt.");
+order(2, "Mein Bruder trifft am Montag seine Freunde.", "er → trifft (e → i); verb in position 2.", ["Am Montag trifft mein Bruder seine Freunde."]);
+order(2, "Siehst du heute den Film?", "Yes/no question: siehst first. sehen: e → ie in the du-form.");
+mc(2, "Das Kind ___ schnell.", ["lauft", "läuft", "laufe"], 1, "laufen: a → ä in the er/es-form: es läuft. laufen = to run.");
+fill(2, "Anna ___ das Auto. (waschen)", "wäscht", "waschen: a → ä: sie wäscht. waschen = to wash.");
+mc(2, "Ich ___ meinem Freund ein Geschenk.", ["gebe", "gibt", "gibst"], 0, "The ich-form has no vowel change: ich gebe. das Geschenk = the present.");
+fill(2, "Du ___ die Jacke. (tragen)", "trägst", "tragen: a → ä: du trägst. tragen = to wear, to carry.");
+order(3, "Meine Schwester schläft heute bis zehn Uhr.", "sie → schläft (a → ä); verb in position 2.", ["Heute schläft meine Schwester bis zehn Uhr."]);
+order(3, "Hilfst du mir in der Küche?", "Yes/no question: hilfst first. helfen: e → i in the du-form.");
+wrong(3, "Er fahrt mit dem Fahrrad zur Arbeit.", "fahrt", "fährt", "The er-form of fahren has the umlaut: fährt. fahrt is the ihr-form.");
+wrong(3, "Du sprechst sehr schnell.", "sprechst", "sprichst", "sprechen changes e → i in the du-form: sprichst.");
+extra(3, "Sie isst gern essen Salat.", "essen", "One verb is enough: Sie isst gern Salat. The infinitive essen is extra.");
+fill(3, "Ich nehme den Bus und du ___ das Auto.", "nimmst", "nehmen: e → i in the du-form: du nimmst.");
+mc(3, "Which sentence is correct?", ["Du vergesst den Termin.", "Du vergisst den Termin.", "Du vergist den Termin."], 1, "vergessen works like essen: e → i, and the double s stays: vergisst. der Termin = the appointment.");
+wrong(3, "Lena lest jeden Abend die Zeitung.", "lest", "liest", "lesen: e → ie in the sie-form: liest. lest is the ihr-form.");
+
+T("04"); // Nouns, gender and plural
+mc(1, "___ Tisch ist neu.", ["Der", "Die", "Das"], 0, "der Tisch (masculine). Learn every noun with its article.");
+mc(1, "___ Lampe ist alt.", ["Der", "Das", "Die"], 2, "die Lampe (feminine). Most nouns in -e are feminine.");
+mc(1, "___ Kind spielt.", ["Die", "Das", "Der"], 1, "das Kind (neuter).");
+fill(1, "Das ist ___ Computer. (ein/eine)", "ein", "der Computer → ein (masculine and neuter take ein).");
+fill(1, "Das ist ___ Banane. (ein/eine)", "eine", "die Banane → eine (feminine).");
+mc(1, "Plural von „das Auto“:", ["die Autos", "die Auten", "die Autoe"], 0, "Nouns ending in -o take -s: die Autos. The plural article is always die.");
+mc(1, "Plural von „der Apfel“:", ["die Apfels", "die Äpfel", "die Apfeln"], 1, "Umlaut plural with no ending: der Apfel → die Äpfel.");
+fill(1, "Ich habe zwei ___. (Schwester, Plural)", "Schwestern", "Feminine nouns often take -n/-en: die Schwester → die Schwestern.");
+fill(2, "Hier sind drei ___. (Buch, Plural)", "Bücher", "das Buch → die Bücher: umlaut + -er.");
+fill(2, "Wir brauchen zwei ___. (Stuhl, Plural)", "Stühle", "der Stuhl → die Stühle: umlaut + -e. der Stuhl = the chair.");
+order(2, "Die Kinder essen gern Bananen.", "Plural subject die Kinder, plural verb essen. die Banane → die Bananen.");
+order(2, "Das Fenster in der Küche ist offen.", "das Fenster is the subject; the verb ist stays in position 2. offen = open.");
+mc(2, "Das sind zwei ___.", ["Frau", "Frauen", "Fraus"], 1, "die Frau → die Frauen (-en plural).");
+fill(2, "Das ist ___ Haus. (ein/eine)", "ein", "das Haus (neuter) → ein.");
+mc(2, "Plural von „die Tomate“:", ["die Tomates", "die Tomate", "die Tomaten"], 2, "Nouns in -e add -n: die Tomaten.");
+fill(2, "Lena sieht drei ___. (Hund, Plural)", "Hunde", "der Hund → die Hunde (-e plural, no umlaut).");
+order(3, "Die Äpfel und die Birnen sind frisch.", "Two plural nouns → plural verb sind. die Birne = the pear.");
+order(3, "Meine Eltern kaufen zwei Autos.", "das Auto → die Autos; the plural object comes at the end.");
+wrong(3, "Das Frau kommt aus Italien.", "Das", "Die", "die Frau is feminine → Die Frau.");
+wrong(3, "Meine zwei Bruders wohnen in Wien.", "Bruders", "Brüder", "der Bruder → die Brüder: umlaut, no ending. -s is only for foreign words like Autos.");
+extra(3, "Die Wohnung hat ein drei Zimmer.", "ein", "A number replaces the article: drei Zimmer. ein is extra.");
+fill(3, "ein Schüler, zwei ___", "Schüler", "Masculine nouns in -er usually keep the same form in the plural: die Schüler.");
+mc(3, "Which sentence is correct?", ["Die Küche ist groß.", "Der Küche ist groß.", "Das Küche ist groß."], 0, "die Küche is feminine.");
+wrong(3, "In der Stadt sind viele Restaurante.", "Restaurante", "Restaurants", "Foreign words take -s: die Restaurants.");
+
+T("05"); // Nominative and accusative
+mc(1, "Ich kaufe ___ Tisch.", ["der", "den", "dem"], 1, "der Tisch is the direct object → accusative den.");
+mc(1, "Ich suche ___ Schlüssel.", ["den", "der", "das"], 0, "der Schlüssel → den (accusative, masculine).");
+mc(1, "Wir brauchen ___ Computer.", ["ein", "einen", "eine"], 1, "der Computer as object → einen.");
+fill(1, "Ich habe ___ Hund. (ein)", "einen", "der Hund → einen in the accusative.");
+fill(1, "Anna trinkt ___ Kaffee. (kein)", "keinen", "der Kaffee → keinen (accusative).");
+mc(1, "Ich esse ___ Apfel.", ["ein", "der", "einen"], 2, "der Apfel → einen.");
+mc(1, "___ Mann liest ein Buch.", ["Der", "Den", "Dem"], 0, "The man is the subject → nominative Der.");
+fill(1, "Ich nehme ___ Pizza. (ein)", "eine", "die Pizza is feminine: eine stays eine in the accusative.");
+fill(2, "Trinkst du ___ Tee? (ein)", "einen", "der Tee → einen.");
+fill(2, "Ich sehe ___ Bus nicht. (der)", "den", "der Bus as object → den.");
+order(2, "Ich möchte einen Kaffee ohne Milch.", "einen Kaffee is the accusative object. ohne = without.");
+order(2, "Omar kauft einen Kuchen für Lena.", "der Kuchen → einen Kuchen (object).", ["Für Lena kauft Omar einen Kuchen."]);
+mc(2, "Wen siehst du? – Ich sehe ___.", ["der Lehrer", "den Lehrer", "dem Lehrer"], 1, "Wen? asks for the accusative object → den Lehrer.");
+fill(2, "Hast du ___ Bruder? (ein)", "einen", "der Bruder → einen.");
+mc(2, "___ Kind isst ___ Banane.", ["Das / eine", "Den / ein", "Das / ein"], 0, "Subject: Das Kind (nominative). Object: die Banane → eine (feminine does not change).");
+fill(2, "Sofia findet ___ Auto. (kein)", "kein", "das Auto is neuter: kein stays kein in the accusative.");
+order(3, "Wer braucht einen Stift für die Prüfung?", "Wer? asks for the subject; einen Stift is the object. der Stift = the pen.");
+order(3, "Meine Mutter sucht einen Parkplatz für das Auto.", "der Parkplatz → einen Parkplatz (object); für also takes the accusative.", ["Für das Auto sucht meine Mutter einen Parkplatz."]);
+wrong(3, "Ich möchte ein Salat, bitte.", "ein", "einen", "der Salat is masculine → einen in the accusative.");
+wrong(3, "Den Arzt kommt um neun Uhr.", "Den", "Der", "The doctor is the subject → nominative Der Arzt.");
+extra(3, "Wir nehmen für einen Tisch am Fenster.", "für", "nehmen takes a direct object: Wir nehmen einen Tisch. No preposition is needed.");
+fill(3, "___ kommt heute? – Der Arzt. (Wer/Wen)", "Wer", "The answer is a subject (Der Arzt) → Wer?");
+mc(3, "___ besuchst du? – Den Opa.", ["Wer", "Wen", "Was"], 1, "The answer is an accusative object (Den Opa) → Wen?");
+wrong(3, "Lena schreibt ein Brief.", "ein", "einen", "der Brief → einen (accusative).");
+
+T("06"); // Negation: nicht and kein
+mc(1, "Ich habe ___ Auto.", ["nicht", "kein", "keine"], 1, "A noun without an article is negated with kein: das Auto → kein Auto.");
+mc(1, "Das ist ___ gut.", ["kein", "keine", "nicht"], 2, "gut is an adjective → nicht.");
+mc(1, "Wir brauchen ___ Hilfe.", ["keine", "nicht", "kein"], 0, "die Hilfe (feminine noun) → keine.");
+fill(1, "Ich trinke ___ Milch. (kein/nicht)", "keine", "die Milch → keine Milch.");
+fill(1, "Wir wohnen ___ in Berlin. (kein/nicht)", "nicht", "A place with a preposition is negated with nicht.");
+mc(1, "Sie kommt heute ___.", ["kein", "nicht", "keine"], 1, "The verb is negated → nicht at the end.");
+fill(1, "Das ist ___ Problem. (kein/nicht)", "kein", "das Problem → kein Problem.");
+mc(1, "Ich habe ___ Hunger.", ["keinen", "nicht", "kein"], 0, "der Hunger as object → keinen.");
+fill(2, "Ich verstehe das ___. (kein/nicht)", "nicht", "das here is a pronoun, not a noun with an article → nicht.");
+fill(2, "Gibt es hier ___ Bäckerei? (kein/nicht)", "keine", "die Bäckerei → keine. die Bäckerei = the bakery.");
+order(2, "Ich esse keinen Fisch.", "der Fisch as object → keinen Fisch.");
+order(2, "Heute arbeite ich nicht.", "nicht negates the whole sentence and goes to the end.", ["Ich arbeite heute nicht."]);
+mc(2, "Das Zimmer ist ___ groß.", ["kein", "nicht", "keine"], 1, "groß is an adjective → nicht.");
+fill(2, "Murat kauft ___ Fahrrad. (kein/nicht)", "kein", "das Fahrrad → kein (neuter stays kein in the accusative).");
+mc(2, "Which sentence is correct?", ["Ich gehe heute kein ins Kino.", "Ich gehe heute nicht ins Kino.", "Ich nicht gehe heute ins Kino."], 1, "nicht stands before the place phrase ins Kino, never before the verb.");
+fill(2, "Lena möchte ___ Kuchen. (kein/nicht)", "keinen", "der Kuchen → keinen (accusative).");
+order(3, "Wir fahren am Sonntag nicht nach Bonn.", "nicht comes before the place phrase nach Bonn.", ["Am Sonntag fahren wir nicht nach Bonn."]);
+order(3, "Omar trinkt keinen Kaffee am Abend.", "der Kaffee → keinen Kaffee.", ["Am Abend trinkt Omar keinen Kaffee."]);
+wrong(3, "Wir essen nicht Fleisch.", "nicht", "kein", "Fleisch is a noun without an article → kein Fleisch. das Fleisch = meat.");
+wrong(3, "Das Wetter ist kein schön.", "kein", "nicht", "schön is an adjective → nicht schön.");
+extra(3, "Sie möchte keine nicht Suppe.", "nicht", "One negation is enough: keine Suppe already means ‘no soup’.");
+fill(3, "Ist das dein Handy? – Nein, das ist ___ mein Handy.", "nicht", "Before a possessive (mein, dein …) use nicht, never kein.");
+mc(3, "Which sentence is correct?", ["Das ist keine meine Tasche.", "Das ist meine Tasche nicht.", "Das ist nicht meine Tasche."], 2, "nicht stands directly before the part it negates: nicht meine Tasche.");
+wrong(3, "Zu Hause gibt es keinen Brot.", "keinen", "kein", "das Brot is neuter → kein Brot (keinen is only masculine).");
+
+T("07"); // Word order: statements and questions
+mc(1, "Heute ___ Deutsch.", ["lerne ich", "ich lerne", "lerne"], 0, "Heute is in position 1, so the verb comes next and the subject follows: Heute lerne ich.");
+mc(1, "___ Kaffee?", ["Du trinkst", "Trinkst", "Trinkst du"], 2, "A yes/no question starts with the verb, then the subject: Trinkst du Kaffee?");
+mc(1, "Which sentence is correct?", ["Am Montag ich arbeite.", "Ich am Montag arbeite.", "Am Montag arbeite ich."], 2, "Am Montag takes position 1; the verb must be in position 2.");
+fill(1, "Morgen ___ nach Hamburg. (fliegen wir / wir fliegen)", "fliegen wir", "After a fronted time word: verb, then subject.");
+fill(1, "___ Fußball? (spielt ihr / ihr spielt)", "Spielt ihr", "Yes/no question: verb first, then the subject.");
+mc(1, "Wann ___?", ["der Zug fährt", "fährt der Zug", "fährt Zug der"], 1, "W-word + verb + subject: Wann fährt der Zug?");
+mc(1, "Which one is a yes/no question?", ["Kommst du morgen?", "Du kommst morgen.", "Wann kommst du?"], 0, "Only the sentence that starts with the verb is a yes/no question.");
+fill(1, "Was ___? (machen Sie / Sie machen)", "machen Sie", "W-question: Was + verb + subject.");
+order(2, "Heute gehe ich ins Kino.", "Heute (1) – gehe (2) – ich – ins Kino.", ["Ich gehe heute ins Kino."]);
+order(2, "Hast du am Samstag Zeit?", "Yes/no question: Hast first, then du.");
+order(2, "Wo wohnt deine Familie?", "W-word first, verb second, subject third.");
+fill(2, "Start with ‘Am Sonntag’: Ich spiele am Sonntag Tennis. → Am Sonntag ___ Tennis.", "spiele ich", "Fronted time phrase → verb, then subject.");
+mc(2, "In Berlin ___.", ["meine Tante wohnt", "wohnt", "wohnt meine Tante"], 2, "Place phrase in position 1 → verb (wohnt) in position 2, then the subject.");
+fill(2, "Make a yes/no question: Du trinkst Tee. → ___ Tee?", "Trinkst du", "Move the verb to the front: Trinkst du Tee?");
+mc(2, "Woher ___?", ["ist Sofia", "Sofia ist", "ist sie Sofia"], 0, "W-word + verb + subject: Woher ist Sofia?");
+fill(2, "Start with ‘Um 12 Uhr’: Wir essen um 12 Uhr. → Um 12 Uhr ___.", "essen wir", "Verb in position 2, subject after it.");
+order(3, "Am Wochenende besuche ich meine Oma.", "Time phrase first, verb second, subject third, object at the end.", ["Ich besuche am Wochenende meine Oma.", "Meine Oma besuche ich am Wochenende."]);
+order(3, "Wie viel kostet das Ticket nach Köln?", "Wie viel is the W-phrase (position 1), kostet is the verb (position 2).");
+order(3, "Lernt ihr im Sommer Deutsch?", "Yes/no question: verb first, then the subject ihr.");
+wrong(3, "Morgen fahrt wir mit dem Zug nach Berlin.", "fahrt", "fahren", "After inversion the verb still agrees with the subject: wir → fahren.");
+wrong(3, "Hast ihr heute Abend Zeit?", "Hast", "Habt", "The question starts with the verb, and ihr → habt.");
+extra(3, "Arbeitest du arbeiten am Samstag?", "arbeiten", "The question already has its verb (Arbeitest); the infinitive is extra.");
+mc(3, "Which sentence is correct?", ["Was du machst heute?", "Was du heute machst?", "Was machst du heute?"], 2, "W-questions: W-word, then the verb, then the subject.");
+fill(3, "Start with ‘Heute’: Sie kauft heute ein Kleid. → Heute ___ ein Kleid.", "kauft sie", "Verb in position 2, subject after it. das Kleid = the dress.");
+
+});

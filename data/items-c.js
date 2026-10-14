@@ -1,0 +1,160 @@
+// A1 topics 15–20
+window.addItems(({ T, mc, fill, order, wrong, extra }) => {
+
+T("15"); // Dative: pronouns and articles
+mc(1, "Wie geht es ___? – Danke, gut.", ["dir", "du", "dich"], 0, "es geht + Dativ → dir. ‘du’ is nominative, ‘dich’ accusative.");
+mc(1, "Das Buch gefällt ___ sehr.", ["ich", "mir", "mich"], 1, "gefallen (to please) takes the dative: mir = to me.");
+mc(1, "Kannst du ___ helfen?", ["mich", "ich", "mir"], 2, "helfen takes the dative: mir, never mich.");
+mc(1, "Die Suppe schmeckt ___ nicht.", ["ihm", "er", "ihn"], 0, "schmecken + Dativ: ihm = to him. die Suppe = the soup.");
+mc(1, "Ich helfe ___ Mutter in der Küche.", ["die", "der", "den"], 1, "Feminine dative: die Mutter → der Mutter.");
+fill(1, "Wie geht es ___? (Sie, formal)", "Ihnen", "Formal ‘you’ in the dative is Ihnen, always with a capital I.");
+fill(1, "Ich danke ___ für die Blumen. (du)", "dir", "danken + Dativ: du → dir. die Blumen = the flowers.");
+fill(1, "Das Auto gehört ___ Lehrer. (der)", "dem", "gehören (to belong to) + Dativ; masculine der → dem.");
+fill(2, "Das Kleid gefällt ___ gut. (sie = she)", "ihr", "sie (she) → ihr in the dative. das Kleid = the dress.");
+fill(2, "Der Kaffee schmeckt ___ nicht. (wir)", "uns", "wir → uns in the dative.");
+fill(2, "Ich helfe ___ Kindern. (die, Plural)", "den", "Plural dative: die → den, and the noun adds -n: Kindern.");
+fill(2, "Die Tasche gehört ___ Frau. (die)", "der", "Feminine dative: die Frau → der Frau. die Tasche = the bag.");
+mc(2, "Das Haus gehört ___ Eltern.", ["der", "den", "die"], 1, "Plural dative article is den: den Eltern.");
+mc(2, "Ich danke ___ für die Hilfe, Frau Weber.", ["Sie", "Ihnen", "Ihr"], 1, "danken + Dativ; the formal dative is Ihnen. die Hilfe = the help.");
+order(2, "Der Film gefällt mir sehr gut.", "gefallen: the thing (der Film) is the subject, the person (mir) is in the dative.", ["Mir gefällt der Film sehr gut."]);
+order(2, "Der Kuchen schmeckt der Oma sehr gut.", "schmecken + Dativ: der Oma = to grandma. der Kuchen = the cake.", ["Der Oma schmeckt der Kuchen sehr gut."]);
+order(3, "Wir gratulieren dem Chef zum Geburtstag.", "gratulieren + Dativ: dem Chef; zum Geburtstag = on his birthday.", ["Dem Chef gratulieren wir zum Geburtstag."]);
+order(3, "Die Jacke gehört der Lehrerin nicht.", "gehören + Dativ: der Lehrerin; nicht goes to the end. die Jacke = the jacket.", ["Der Lehrerin gehört die Jacke nicht."]);
+wrong(3, "Die Pizza schmeckt mich sehr gut.", "mich", "mir", "schmecken takes the dative: mir, not the accusative mich.");
+wrong(3, "Ich helfe der Vater im Garten.", "der", "dem", "helfen + Dativ, masculine: der Vater → dem Vater.");
+wrong(3, "Wie geht es du heute?", "du", "dir", "es geht + Dativ → dir. ‘du’ is only the subject form.");
+extra(3, "Die Stadt gefällt mir mich sehr.", "mich", "gefallen needs one dative object: mir. The accusative mich is extra.");
+fill(3, "Ich gratuliere ___ Freundin zum neuen Job.", "der", "gratulieren + Dativ; feminine die Freundin → der Freundin.");
+fill(3, "Omar und Lena, wir danken ___ für das Geschenk!", "euch", "Speaking to two people (ihr) → dative euch. das Geschenk = the present.");
+
+T("16"); // Prepositions of time
+mc(1, "Der Kurs beginnt ___ Montag.", ["am", "um", "im"], 0, "Days of the week take am: am Montag.");
+mc(1, "Ich stehe ___ sieben Uhr auf.", ["am", "um", "im"], 1, "Clock times take um: um sieben Uhr.");
+mc(1, "___ Sommer fahren wir ans Meer.", ["Am", "Um", "Im"], 2, "Seasons take im: im Sommer. das Meer = the sea.");
+mc(1, "Lena hat ___ Mai Geburtstag.", ["im", "am", "um"], 0, "Months take im: im Mai.");
+fill(1, "___ Abend sehe ich fern. (am / um / im)", "Am", "Parts of the day take am: am Abend, am Morgen (but: in der Nacht).");
+fill(1, "Das Geschäft öffnet ___ 9 Uhr. (am / um / im)", "um", "um + clock time. das Geschäft = the shop.");
+fill(1, "Wir arbeiten von Montag ___ Freitag.", "bis", "von … bis = from … to.");
+mc(1, "Ich wohne ___ zwei Jahren in Berlin.", ["vor", "nach", "seit"], 2, "seit = since/for, with present tense: I have been living here for two years.");
+fill(2, "___ Wochenende schlafe ich lange. (am / im)", "Am", "am Wochenende = at the weekend.");
+fill(2, "___ Winter ist es kalt. (am / im)", "Im", "Seasons take im: im Winter.");
+fill(2, "Der Zug fährt ___ halb neun. (um / am)", "um", "Clock times, also informal ones, take um: um halb neun.");
+fill(2, "Ich lerne seit ___ Monat Deutsch. (ein)", "einem", "seit + Dativ: ein Monat → seit einem Monat.");
+mc(2, "___ dem Essen trinke ich einen Kaffee.", ["Am", "Nach", "Bis"], 1, "nach + Dativ = after: nach dem Essen.");
+mc(2, "___ dem Frühstück dusche ich.", ["Um", "Am", "Vor"], 2, "vor + Dativ = before: vor dem Frühstück. duschen = to shower.");
+order(2, "Am Samstag gehen wir ins Kino.", "Time phrase first, verb in position 2: Am Samstag gehen wir …", ["Wir gehen am Samstag ins Kino."]);
+order(2, "Der Film beginnt um acht Uhr.", "um + clock time at the end of the sentence.");
+order(3, "Seit einem Jahr arbeite ich in der Bäckerei.", "seit einem Jahr (dative) in position 1, then the verb. die Bäckerei = the bakery.", ["Ich arbeite seit einem Jahr in der Bäckerei."]);
+order(3, "Nach dem Unterricht fahre ich nach Hause.", "nach dem Unterricht = after the lesson (dative); nach Hause = home.", ["Ich fahre nach dem Unterricht nach Hause."]);
+wrong(3, "Ich habe am Juli Urlaub.", "am", "im", "Months take im: im Juli. der Urlaub = holiday.");
+wrong(3, "Mein Termin ist am 14 Uhr.", "am", "um", "Clock times take um: um 14 Uhr. der Termin = the appointment.");
+wrong(3, "Ich bin seit eine Woche krank.", "eine", "einer", "seit + Dativ: eine Woche → seit einer Woche.");
+extra(3, "Wir treffen uns um am Sonntag.", "um", "Days take am alone: am Sonntag. um is only for clock times.");
+fill(3, "Der Supermarkt hat von 8 ___ 20 Uhr geöffnet.", "bis", "von … bis for a time span. geöffnet = open.");
+fill(3, "___ Herbst ist das Wetter oft schlecht.", "Im", "Seasons take im: im Herbst = in autumn.");
+
+T("17"); // Prepositions of place
+mc(1, "Wo bist du? – Ich bin ___ Büro.", ["im", "ins", "nach"], 0, "wo? (where, no movement) → in + Dativ: im Büro.");
+mc(1, "Aylin reist morgen ___ Berlin.", ["in", "nach", "zu"], 1, "wohin? with a city → nach: nach Berlin. reisen = to travel.");
+mc(1, "Ich gehe heute ___ Arzt.", ["zur", "nach", "zum"], 2, "wohin? with a person or place → zu; der Arzt → zum Arzt.");
+mc(1, "Woher kommst du? – Ich komme ___ der Türkei.", ["von", "nach", "aus"], 2, "Origin (country, city) → aus: aus der Türkei.");
+mc(1, "Lena kommt ___ dem Taxi.", ["mit", "bei", "zu"], 0, "Transport takes mit + Dativ: mit dem Taxi.");
+fill(1, "Am Wochenende bin ich ___ meiner Oma. (bei / zu)", "bei", "Being at a person's home → bei + Dativ: bei meiner Oma.");
+fill(1, "Die Kinder sind ___ Schule. (in + der)", "in der", "wo? → in + Dativ: in der Schule.");
+fill(1, "Wir treffen uns ___ Bahnhof. (an + dem)", "am", "wo? → an + dem = am: am Bahnhof.");
+fill(2, "Sofia geht ___ Schule. (zu + der)", "zur", "wohin? → zu + der = zur: zur Schule.");
+fill(2, "Pavel fliegt ___ Spanien. (nach / zu)", "nach", "Countries without an article take nach: nach Spanien.");
+fill(2, "Das Buch liegt ___ Tisch. (auf + dem)", "auf dem", "wo? → auf + Dativ: auf dem Tisch. liegen = to lie.");
+fill(2, "Ich komme gerade ___ Bäcker. (von + dem)", "vom", "Coming from a person or place → von + dem = vom: vom Bäcker.");
+mc(2, "Hana fährt ___ Fahrrad zur Uni.", ["mit der", "bei dem", "mit dem"], 2, "mit + Dativ; das Fahrrad → mit dem Fahrrad.");
+mc(2, "Wohin gehst du? – ___ Supermarkt.", ["Im", "Zum", "Beim"], 1, "wohin? (movement) → zum Supermarkt. im/beim answer wo?.");
+order(2, "Wir gehen zu Fuß zum Markt.", "zu Fuß = on foot; wohin? → zum Markt.", ["Zum Markt gehen wir zu Fuß."]);
+order(2, "Murat wohnt bei seinen Eltern.", "bei + Dativ for being at someone's place: bei seinen Eltern.");
+order(3, "Nach der Arbeit gehe ich zur Bank.", "Time phrase first, verb second; wohin? → zur Bank.", ["Ich gehe nach der Arbeit zur Bank."]);
+order(3, "Meine Schwester kommt aus Polen und arbeitet in Wien.", "woher? → aus Polen; wo? → in Wien.");
+wrong(3, "Ich fliege im Sommer zu Italien.", "zu", "nach", "Countries and cities take nach, not zu: nach Italien.");
+wrong(3, "Tom ist heute zum Arzt.", "zum", "beim", "ist (no movement) asks wo? → beim Arzt. zum answers wohin?.");
+wrong(3, "Jonas kommt von Italien.", "von", "aus", "Origin from a country → aus Italien. von is for people and places like vom Arzt.");
+extra(3, "Wir fahren mit dem Auto nach zu Hamburg.", "zu", "A city takes nach only: nach Hamburg.");
+fill(3, "Anna arbeitet ___ Krankenhaus.", "im", "wo? → in + dem = im Krankenhaus (hospital).");
+fill(3, "Am Nachmittag gehe ich ___ Friseur.", "zum", "wohin? with a person → zu + dem = zum Friseur (hairdresser).");
+
+T("18"); // Numbers, time and dates
+mc(1, "Wie spät ist es? – Es ist ___. (14:30, informal)", ["halb zwei", "halb drei", "halb vier"], 1, "halb + the NEXT hour: 14:30 = halb drei.");
+mc(1, "Es ist ___. (9:15, informal)", ["Viertel nach neun", "Viertel vor neun", "Viertel nach zehn"], 0, "Quarter past = Viertel nach: 9:15 = Viertel nach neun.");
+mc(1, "Heute ist der ___ Mai. (3.)", ["drei", "dritten", "dritte"], 2, "After der the ordinal ends in -e: der dritte Mai.");
+mc(1, "Ich habe am ___ Juni Geburtstag. (1.)", ["erste", "ersten", "eins"], 1, "After am the ordinal ends in -en: am ersten Juni.");
+mc(1, "Das Brot kostet ___. (2,50 €)", ["zwei Euro fünfzig", "zwei fünfzig Euro", "zwei Euro halb"], 0, "Prices: Euro comes between the numbers: zwei Euro fünfzig.");
+fill(1, "Es ist ___. (8:00, formal)", "acht Uhr", "Formal time: number + Uhr: acht Uhr.");
+fill(1, "Es ist ___. (10:45, informal)", "Viertel vor elf", "Quarter to = Viertel vor the next hour: Viertel vor elf.");
+fill(1, "Wie viel kostet das? – ___ Euro. (12)", "zwölf", "12 = zwölf.");
+fill(2, "Es ist ___. (16:30, informal)", "halb fünf", "halb + next hour: 16:30 = halb fünf.");
+fill(2, "Es ist ___. (7:15, informal)", "Viertel nach sieben", "7:15 = Viertel nach sieben.");
+fill(2, "Der Kurs beginnt am ___ September. (5.)", "fünften", "am + ordinal + -en: am fünften September.");
+fill(2, "Heute ist der ___ Oktober. (20.)", "zwanzigste", "From 20 on the ordinal uses -ste: der zwanzigste.");
+mc(2, "Wie viel Uhr ist es? – Es ist ___. (18:40, formal)", ["sechs Uhr vierzig", "achtzehn Uhr vierzig", "achtzehn vierzig Uhr"], 1, "Formal time uses the 24-hour clock: achtzehn Uhr vierzig.");
+mc(2, "Murat ist ___ geboren. (1998)", ["in neunzehnhundertachtundneunzig", "im neunzehnhundertachtundneunzig", "neunzehnhundertachtundneunzig"], 2, "Years stand alone, without in: 1998 = neunzehnhundertachtundneunzig. geboren = born.");
+order(2, "Es ist Viertel vor acht.", "Viertel vor + hour = quarter to.");
+order(2, "Die Party ist am zwölften März.", "am + ordinal (-en) + month.");
+order(3, "Der Zug fährt um halb zehn ab.", "um + informal time; the separable prefix ab goes to the end.", ["Um halb zehn fährt der Zug ab."]);
+order(3, "Die Prüfung ist am siebten April um neun Uhr.", "Date (am siebten April) before clock time (um neun Uhr). die Prüfung = the exam.", ["Am siebten April ist die Prüfung um neun Uhr."]);
+wrong(3, "Heute ist der achten August.", "achten", "achte", "After der the ordinal ends in -e: der achte August.");
+wrong(3, "Das Treffen ist am zweite November.", "zweite", "zweiten", "After am the ordinal ends in -en: am zweiten November. das Treffen = the meeting.");
+wrong(3, "Es ist 16:30 Uhr, also halb vier.", "vier", "fünf", "halb names the NEXT hour: 16:30 = halb fünf.");
+extra(3, "Wir treffen uns um am halb sieben.", "am", "Clock times take um only: um halb sieben.");
+fill(3, "Es ist ___. (13:30, informal)", "halb zwei", "13:30 = halb zwei (half way to two).");
+fill(3, "Anna ist ___ geboren. (2001)", "zweitausendeins", "Years after 2000: zweitausend + number: zweitausendeins.");
+
+T("19"); // Connectors and doch
+mc(1, "Ich heiße Lena ___ ich komme aus Polen.", ["und", "oder", "aber"], 0, "und simply adds information; the word order stays normal.");
+mc(1, "Möchtest du Tee ___ Kaffee?", ["aber", "oder", "denn"], 1, "A choice between two things → oder.");
+mc(1, "Ich bleibe zu Hause, ___ ich bin krank.", ["oder", "aber", "denn"], 2, "denn gives the reason, and the clause keeps normal order: ich bin.");
+mc(1, "Das Hotel ist schön, ___ es ist teuer.", ["denn", "und", "aber"], 2, "A contrast → aber.");
+mc(1, "Hast du keine Zeit? – ___, ich habe Zeit.", ["Ja", "Doch", "Nein"], 1, "A negative question (keine) answered positively → Doch.");
+fill(1, "Kommst du nicht mit? – ___, ich komme mit! (ja / doch)", "Doch", "The question is negative (nicht), the answer is positive → Doch.");
+fill(1, "Ich lerne Deutsch, ___ ich möchte in Berlin arbeiten. (because)", "denn", "denn = because; normal word order follows.");
+fill(1, "Ich spiele Fußball und mein Bruder spielt ___ Fußball. (also)", "auch", "auch = also, after the verb.");
+fill(2, "Hast du Hunger? – ___, ich habe Hunger. (yes)", "Ja", "The question is positive, so the positive answer is Ja, not Doch.");
+fill(2, "Ist das Essen nicht gut? – ___, es ist sehr gut.", "Doch", "Negative question (nicht) + positive answer → Doch.");
+fill(2, "Nimmst du den Bus ___ gehst du zu Fuß? (or)", "oder", "oder joins two alternatives.");
+fill(2, "Wir gehen nicht ins Kino, ___ der Film ist langweilig. (because)", "denn", "denn = because; position 0, so the verb stays in position 2. langweilig = boring.");
+mc(2, "Ich kaufe keinen Fisch, ___ ich mag ihn nicht.", ["denn", "aber", "oder"], 0, "The second clause gives the reason → denn.");
+mc(2, "Welcher Satz ist richtig?", ["Ich schlafe jetzt, denn bin ich müde.", "Ich schlafe jetzt, denn ich bin müde.", "Ich schlafe jetzt, denn ich müde bin."], 1, "denn is in position 0: subject + verb follow as in a normal sentence.");
+order(2, "Ich bin müde, aber ich gehe arbeiten.", "aber in position 0; both parts keep normal word order.");
+order(2, "Trinkst du Wasser oder Saft?", "Yes/no question: verb first; oder joins the two options. der Saft = the juice.");
+order(3, "Ich kann nicht kommen, denn ich habe keine Zeit.", "denn + normal order: ich habe keine Zeit.");
+order(3, "Lena lernt Spanisch und ihr Mann lernt Italienisch.", "und joins two complete main clauses, each with the verb in position 2.");
+wrong(3, "Hast du kein Auto? – Ja, ich habe ein Auto.", "Ja", "Doch", "Negative question answered positively → Doch, not Ja.");
+wrong(3, "Es regnet, oder wir gehen spazieren.", "oder", "aber", "This is a contrast (it rains, but we go), so aber.");
+wrong(3, "Ich kaufe Brot, aber ich habe Hunger.", "aber", "denn", "The second clause is the reason for the first → denn.");
+extra(3, "Ich komme nicht mit, denn weil ich muss arbeiten.", "weil", "‘ich muss arbeiten’ has normal order, so denn is the connector; weil would send the verb to the end.");
+fill(3, "Wir fahren nicht nach Italien, ___ wir haben kein Geld.", "denn", "Reason with normal word order → denn.");
+fill(3, "Anna singt nicht und Tom singt ___ nicht.", "auch", "auch nicht = not either; auch comes before nicht.");
+
+T("20"); // gern, lieber, sehr, viel and es gibt
+mc(1, "Ich spiele ___ Gitarre.", ["lieb", "gern", "gerner"], 1, "gern after the verb = I like playing. ‘gerner’ does not exist.");
+mc(1, "In der Stadt gibt es ___ Park.", ["einen", "ein", "einem"], 0, "es gibt + Akkusativ: der Park → einen Park.");
+mc(1, "Das Wetter ist heute ___ schön.", ["sehr", "viel", "viele"], 0, "sehr strengthens an adjective: sehr schön. viel goes with nouns or verbs.");
+mc(1, "Ich habe ___ Freunde.", ["viel", "sehr", "viele"], 2, "Countable plural noun → viele Freunde.");
+mc(1, "Ich mag Tee, aber ich mag Kaffee ___.", ["gern", "lieber", "viel"], 1, "Comparing two things → lieber = preferably, more.");
+fill(1, "Das Essen ist ___ gut. (very)", "sehr", "sehr = very, before an adjective.");
+fill(1, "Es gibt hier ___ Supermarkt. (ein)", "einen", "es gibt + Akkusativ; masculine ein → einen.");
+fill(1, "Ich schwimme ___. (gladly)", ["gern", "gerne"], "gern (or gerne) after the verb = I like to.");
+fill(2, "Lena spielt gern Tennis, aber sie spielt ___ Fußball. (preferably)", "lieber", "gern → lieber for the thing she prefers.");
+fill(2, "Omar hört Musik, Jonas liest ein Buch, und ich schlafe am ___. (most of all)", "liebsten", "gern – lieber – am liebsten: the superlative is am liebsten.");
+fill(2, "Gibt es hier ___ Bahnhof? (ein)", "einen", "es gibt + Akkusativ: einen Bahnhof.");
+fill(2, "Pavel arbeitet ___. (a lot)", "viel", "viel after a verb = a lot.");
+mc(2, "Das Hotel ist ___.", ["teure", "teuer", "teures"], 1, "After sein the adjective has no ending: teuer.");
+mc(2, "Hana hat ___ Zeit.", ["sehr", "viele", "viel"], 2, "Zeit is uncountable → viel Zeit. viele is for plurals.");
+order(2, "Ich trinke lieber Wasser als Saft.", "lieber … als = prefer … to. lieber stands after the verb.");
+order(2, "In unserem Dorf gibt es eine Schule.", "es gibt + Akkusativ; after a fronted place phrase: gibt es. das Dorf = the village.", ["Es gibt in unserem Dorf eine Schule."]);
+order(3, "Am Wochenende gehe ich am liebsten ins Schwimmbad.", "am liebsten after the verb and subject; das Schwimmbad = the swimming pool.", ["Ich gehe am Wochenende am liebsten ins Schwimmbad."]);
+order(3, "Gibt es in der Nähe eine Apotheke?", "Question: Gibt es …? + Akkusativ. in der Nähe = nearby, die Apotheke = the pharmacy.");
+wrong(3, "Ich fahre viel gern Fahrrad.", "viel", "sehr", "To strengthen gern use sehr: sehr gern.");
+wrong(3, "Es gibt hier ein Markt.", "ein", "einen", "es gibt + Akkusativ: der Markt → einen Markt.");
+wrong(3, "Die Wohnung ist sehr kleine.", "kleine", "klein", "After sein the adjective takes no ending: klein.");
+extra(3, "Ich trinke gern lieber Kaffee als Tee.", "gern", "With als you compare, so only lieber fits: lieber Kaffee als Tee.");
+fill(3, "Am Bahnhof sind ___ Menschen. (many)", "viele", "Plural noun → viele Menschen.");
+fill(3, "Ich esse gern Obst, aber am ___ esse ich Äpfel.", "liebsten", "Superlative of gern: am liebsten. das Obst = fruit.");
+
+});
